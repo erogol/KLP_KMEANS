@@ -138,8 +138,8 @@ if __name__ == '__main__':
 	plt.scatter(W[:,0],W[:,1],color='blue',s=20,edgecolor='none')
 	plt.scatter(W2[:,0],W2[:,1],color='yellow',s=20,edgecolor='none')
 
-	pylab.scatter(10+(arange(len(klp_kmeans_times))*20), klp_kmeans_times)
-	pylab.scatter(10+(arange(len(kmeans_times))*20), kmeans_times, color='red')
+	plt.scatter(10+(arange(len(klp_kmeans_times))*20), klp_kmeans_times)
+	plt.scatter(10+(arange(len(kmeans_times))*20), kmeans_times, color='red')
 
 
 	#Cluster size test
@@ -162,8 +162,8 @@ if __name__ == '__main__':
 	    klp_kmeans_times2.append(t2-t1)
 	    kmeans_times2.append(t4-t3)
 
-	pylab.scatter(10+(arange(len(klp_kmeans_times2))*20), rsom_times2)
-	pylab.scatter(10+(arange(len(kmeans_times2))*20), kmeans_times2, color='red')
+	plt.scatter(10+(arange(len(klp_kmeans_times2))*20), rsom_times2)
+	plt.scatter(10+(arange(len(kmeans_times2))*20), kmeans_times2, color='red')
 
 
 	#DATA size test
@@ -190,6 +190,6 @@ if __name__ == '__main__':
 	    klp_kmeans_times3.append(t2-t1)
 	    kmeans_times3.append(t4-t3)
 
-	pylab.scatter(10+(arange(len(klp_kmeans_times3))*20), rsom_times3)
-	pylab.scatter(10+(arange(len(kmeans_times3))*20), kmeans_times3, color='red')
+	plt.scatter(10+(arange(len(klp_kmeans_times3))*20), rsom_times3)
+	plt.scatter(10+(arange(len(kmeans_times3))*20), kmeans_times3, color='red')
 
