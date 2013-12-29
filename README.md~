@@ -1,14 +1,11 @@
 <h2>KLP_KMEANS</h2>
 
-<<<<<<< HEAD
+
 it is very fast implementation of <a href='http://www.cs.bham.ac.uk/~jlw/sem2a2/Web/Kohonen.htm'> Kohonen Learning Procedure Kmeans </a>. Notice that, it is different then Self Organazing Map. It only updates cluster centroids with the Kohonen's update function instead of original Kmeans averaging.
 <br/>
 It includes two implementation of the algorithm, NUMPY and THEANO based versions. For small problems NUMPY version is better then THEANO version, nevertheless THEANO creates significant difference as the problem getting larger. 
 <br/>
 You are also able to utilize GPU with correct configuration of THEANO. Refer to <a href = 'http://deeplearning.net/software/theano/tutorial/using_gpu.html'> http://deeplearning.net/software/theano/tutorial/using_gpu.html </a> for GPU configurations.
-=======
-it is very fast implementation of Kohonen Learning Procedure Kmeans. It requrires relatively less iteration with powerful NUMPY and THEANO versions. For small problems NUMPY version is better then THEANO version, nevertheless THEANO creates significant difference as the problem getting larger. You are also able to utilize GPU with correct configuration of THEANO. Refer to <a href = 'http://deeplearning.net/software/theano/tutorial/using_gpu.html'> http://deeplearning.net/software/theano/tutorial/using_gpu.html </a>
->>>>>>> 2615d89370d0d7036142312c709dd60b3fe13172
 
 It is all realeased for freewill of use, however it is good to comment for any suggestion, improvement or application.
 
@@ -18,7 +15,4 @@ It is all realeased for freewill of use, however it is good to comment for any s
 erengolge@gmail.com <br/>
 www.erengolge.com <br/>
 www.erogol.com <br/>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2615d89370d0d7036142312c709dd60b3fe13172

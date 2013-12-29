@@ -3,7 +3,9 @@
 
 it is very fast implementation of <a href='http://www.cs.bham.ac.uk/~jlw/sem2a2/Web/Kohonen.htm'> Kohonen Learning Procedure Kmeans </a>. Notice that, it is different then Self Organazing Map. It only updates cluster centroids with the Kohonen's update function instead of original Kmeans averaging.
 <br/>
+<br/>
 It includes two implementation of the algorithm, NUMPY and THEANO based versions. For small problems NUMPY version is better then THEANO version, nevertheless THEANO creates significant difference as the problem getting larger. 
+<br/>
 <br/>
 You are also able to utilize GPU with correct configuration of THEANO. Refer to <a href = 'http://deeplearning.net/software/theano/tutorial/using_gpu.html'> http://deeplearning.net/software/theano/tutorial/using_gpu.html </a> for GPU configurations.
 
