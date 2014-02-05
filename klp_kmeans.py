@@ -71,8 +71,9 @@ def klp_kmeans(data, cluster_num, alpha, epochs = -1, batch = 1, verbose = False
 	for epoch in range(epochs):
 	    C = 0
 	    for i in range(0, data.shape[0], batch):
-	        D = find_bmu(data[i:i+batch, :])
-	        S = np.zeros([batch,cluster_num])
+	    	batch_data = data[i:i+batch, :]
+	        D = find_bmu(batch_data)
+	        S = np.zeros([batch_data.shape[0],cluster_num])
 	        #S = np.zeros([batch,cluster_num], theano.config.floatX)
 	        S[range(batch),D] = 1
 	        cost = update(data[i:i+batch, :], S)
