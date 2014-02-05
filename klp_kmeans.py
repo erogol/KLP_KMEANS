@@ -51,7 +51,7 @@ def klp_kmeans(data, cluster_num, alpha, epochs = -1, batch = 1, verbose = False
 	# Find winner unit
 	bmu = ((W**2).sum(axis=1, keepdims=True) + (X**2).sum(axis=1, keepdims=True).T - 2*T.dot(W, X.T)).argmin(axis=0)
 	dist = T.dot(WIN.T, X) - WIN.sum(0)[:, None] * W
-	err = abs(dist).sum()
+	err = abs(dist).sum()/X.shape[0]
 
 	update = function([X,WIN],outputs=err,updates=[(W, W + alpha * dist)])
 	find_bmu = function([X], bmu)
