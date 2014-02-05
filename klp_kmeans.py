@@ -75,8 +75,8 @@ def klp_kmeans(data, cluster_num, alpha, epochs = -1, batch = 1, verbose = False
 	        D = find_bmu(batch_data)
 	        S = np.zeros([batch_data.shape[0],cluster_num])
 	        #S = np.zeros([batch,cluster_num], theano.config.floatX)
-	        S[range(batch),D] = 1
-	        cost = update(data[i:i+batch, :], S)
+	        S[:,D] = 1
+	        cost = update(batch_data, S)
 	        
 	    if epoch%10 == 0 and verbose:
 	        print "Avg. centroid distance -- ", cost.sum(),"\t EPOCH : ", epoch
