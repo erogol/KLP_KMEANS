@@ -42,10 +42,16 @@ def klp_kmeans(data, cluster_num, alpha, epochs = -1, batch = 1, verbose = False
 	# Symmbol variables
 	X = T.dmatrix('X')
 	WIN = T.dmatrix('WIN')
+	
+	# for GPU use 
+	# X = T.matrix('X')
+	# WIN = T.dmatrix('WIN')
 
 	# Init weights random
 	W = theano.shared(rng.randn(cluster_num, data.shape[1]), name="W")
+	# for GPU use 
 	#W = theano.shared(rng.randn(cluster_num, data.shape[1]).astype(theano.config.floatX), name="W")
+	
 	W_old = W.get_value()
 
 	# Find winner unit
@@ -74,6 +80,7 @@ def klp_kmeans(data, cluster_num, alpha, epochs = -1, batch = 1, verbose = False
 	    	batch_data = data[i:i+batch, :]
 	        D = find_bmu(batch_data)
 	        S = np.zeros([batch_data.shape[0],cluster_num])
+	        # for GPU use 
 	        #S = np.zeros([batch,cluster_num], theano.config.floatX)
 	        S[:,D] = 1
 	        cost = update(batch_data, S)
